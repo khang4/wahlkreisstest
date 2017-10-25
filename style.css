@@ -34,14 +34,22 @@ a
     box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 
-.menu-show
+.map .menu-show
 {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
     width: 50px;
     height: 50px;
-    background-color: red;
+    line-height: 50px;
+    font-size: 25px;
+    color: #e7395a;
+    text-align: center;
+    padding: 0;
+    margin-left: 10px;
+    transition: opacity .2s;
+}
+
+.map .menu-show.hidden
+{
+    opacity: 0;
 }
 
 .menu-bar
@@ -56,7 +64,7 @@ a
     height: 0px;
 }
 
-.menu-bar .button
+.menu-bar .button,.menu-show
 {
     display: inline-block;
     font-family: roboto;
@@ -69,7 +77,7 @@ a
     transition: background-color .2s;
 }
 
-.menu-bar .button:hover
+.menu-bar .button:hover,.map .menu-show:hover
 {
     background-color: rgba(255,255,255,.8);
 }

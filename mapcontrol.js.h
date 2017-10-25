@@ -4,8 +4,10 @@ class _mapControl
     DirectionService direction; //direction service object
 
     element menu;
+    element menuShow;
 
     void menuSet();
+    void mapButtons();
 
     void roadLineDrawtest();
     void loadGeoJsonTest();

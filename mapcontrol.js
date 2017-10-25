@@ -12,13 +12,29 @@ class _mapControl
         this.menu=document.querySelector(".menu-bar");
 
         this.menuSet();
+        this.mapButtons();
     }
 
     menuSet()
     {
         document.querySelector(".minimise").addEventListener("click",(e)=>{
             this.menu.classList.add("hidden");
+            this.menuShow.classList.remove("hidden");
         });
+    }
+
+    mapButtons()
+    {
+        this.menuShow=document.createElement("div");
+        this.menuShow.classList.add("menu-show","hidden");
+        this.menuShow.innerHTML="▴";
+
+        this.menuShow.addEventListener("click",(e)=>{
+            this.menu.classList.remove("hidden");
+            this.menuShow.classList.add("hidden");
+        });
+
+        this.map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(this.menuShow);
     }
 
     //draw a polyline from a coordinate to another, following
