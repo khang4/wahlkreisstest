@@ -1,12 +1,114 @@
 @charset "UTF-8";
 
+html
+{
+    height: 100%;
+}
+
 body
 {
+    height: 100%;
     margin: 0;
+    font-size: 0;
+    background-color: #e7395a;
+}
+
+a
+{
+    text-decoration: none;
+    color: #e7395a;
+}
+
+.wrap
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .map
 {
-    width: 1000px;
-    height: 800px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+
+.menu-show
+{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+.menu-bar
+{
+    height: 100px;
+    overflow: hidden;
+    transition: height .4s;
+}
+
+.menu-bar.hidden
+{
+    height: 0px;
+}
+
+.menu-bar .button
+{
+    display: inline-block;
+    font-family: roboto;
+    font-size: 17px;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+    padding: 5px 20px 5px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.menu-bar .button:hover
+{
+    background-color: rgba(255,255,255,.8);
+}
+
+.menu-bar .menu-contain
+{
+    display: flex;
+    height: 100%;
+}
+
+.menu-bar .menu-buttons
+{
+    width: 100%;
+}
+
+.menu-bar .minimise
+{
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 100%;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity .2s;
+}
+
+.menu-bar .minimise:hover
+{
+    opacity: .6;
+}
+
+.minimise .inner
+{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    border-left: 1px solid white;
+    box-sizing: border-box;
 }
