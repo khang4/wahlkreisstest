@@ -10,6 +10,7 @@ body
     height: 100%;
     margin: 0;
     font-size: 0;
+    font-family: roboto;
     background-color: #e7395a;
 }
 
@@ -54,7 +55,9 @@ a
 
 .menu-bar
 {
+    display: flex;
     height: 100px;
+    flex-direction: column;
     overflow: hidden;
     transition: height .4s;
 }
@@ -64,10 +67,29 @@ a
     height: 0px;
 }
 
+.menu-bar.expanded
+{
+    height: 500px;
+}
+
+.menu-bar.expanded .menu-contain
+{
+    flex: 0 0 100px;
+}
+
+.menu-extra
+{
+    height: 0;
+}
+
+.menu-bar.expanded .menu-extra
+{
+    height: 100%;
+}
+
 .menu-bar .button,.menu-show
 {
     display: inline-block;
-    font-family: roboto;
     font-size: 17px;
     background-color: white;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
@@ -123,4 +145,27 @@ a
     text-align: center;
     border-left: 1px solid white;
     box-sizing: border-box;
+}
+
+table.info-table
+{
+    border-radius: 5px;
+    background-color: white;
+    border-collapse: collapse;
+}
+
+table.info-table th,table.info-table tr
+{
+    font-size: 15px;
+    padding: 10px;
+}
+
+table.info-table tr
+{
+    border-bottom: 1px solid #e7395a;
+}
+
+table.info-table td
+{
+    padding: 10px;
 }

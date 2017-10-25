@@ -18,12 +18,17 @@ class _mapControl
     menuSet()
     {
         this.menu.querySelector(".minimise").addEventListener("click",(e)=>{
+            this.menu.classList.remove("expanded");
             this.menu.classList.add("hidden");
             this.menuShow.classList.remove("hidden");
         });
 
         this.menu.querySelector(".test1").addEventListener("click",(e)=>{
             this.loadGeoJsonTest();
+        });
+
+        this.menu.querySelector(".expand").addEventListener("click",(e)=>{
+            this.menu.classList.add("expanded");
         });
     }
 
