@@ -10,7 +10,7 @@ body
     height: 100%;
     margin: 0;
     font-size: 0;
-    font-family: roboto;
+    font-family: roboto,meiryo,Arial,Helvetica,sans-serif;
     background-color: #e7395a;
 }
 
@@ -80,6 +80,7 @@ a
 .menu-extra
 {
     height: 0;
+    overflow: auto;
 }
 
 .menu-bar.expanded .menu-extra
@@ -147,10 +148,17 @@ a
     box-sizing: border-box;
 }
 
+.white-round-box
+{
+    border-radius: 10px;
+    background-color: white;
+    margin: 8px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+}
+
 table.info-table
 {
-    border-radius: 5px;
-    background-color: white;
+    display: inline-block;
     border-collapse: collapse;
 }
 
@@ -162,10 +170,19 @@ table.info-table th,table.info-table tr
 
 table.info-table tr
 {
-    border-bottom: 1px solid #e7395a;
+    border-bottom: 1px solid #fa486c;
 }
 
 table.info-table td
 {
     padding: 10px;
+}
+
+.text-box
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 500px;
+    padding: 16px 20px 16px 20px;
+    font-size: 18px;
 }
