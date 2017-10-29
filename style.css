@@ -173,6 +173,11 @@ table.info-table tr
     border-bottom: 1px solid #fa486c;
 }
 
+table.info-table tr:last-child
+{
+    border-bottom: none;
+}
+
 table.info-table td
 {
     padding: 10px;
@@ -185,4 +190,9 @@ table.info-table td
     width: 500px;
     padding: 16px 20px 16px 20px;
     font-size: 18px;
+}
+
+.map-bubble
+{
+    width: 200px;
 }

@@ -84,5 +84,17 @@ class _mapControl
 
             return {fillColor:color,strokeColor:color,strokeWeight:1};
         });
+
+        var infowindow=new google.maps.InfoWindow({
+            content:`<table class="info-table"><tbody><tr><td>sample</td><td>data</td></tr><tr><td>sample</td><td>data</td></tr><tr><td>sample</td><td>data</td></tr></tbody></table>`
+        });
+
+        this.map.data.addListener("click",(e)=>{
+            // console.log(e.latLng.lat());
+            // console.log(e.latLng.lng());
+
+            infowindow.setPosition(e.latLng);
+            infowindow.open(this.map);
+        });
     }
 }
