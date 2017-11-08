@@ -17,17 +17,22 @@ class _mapControl
 
     menuSet()
     {
+        var expandMenuButton=this.menu.querySelector(".expand");
         this.menu.querySelector(".minimise").addEventListener("click",(e)=>{
             this.menu.classList.remove("expanded");
             this.menu.classList.add("hidden");
             this.menuShow.classList.remove("hidden");
+            expandMenuButton.innerText="additional information";
         });
 
         this.menu.querySelector(".test1").addEventListener("click",(e)=>{
             this.loadGeoJsonTest();
         });
 
-        var expandMenuButton=this.menu.querySelector(".expand");
+        this.menu.querySelector(".maximise").addEventListener("click",(e)=>{
+
+        });
+
         expandMenuButton.addEventListener("click",(e)=>{
             if (!this.menu.classList.contains("expanded"))
             {
