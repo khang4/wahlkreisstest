@@ -79,8 +79,9 @@ a
 
 .menu-extra
 {
-    height: 0;
+    height: 0%;
     overflow: auto;
+    transition: height .2s;
 }
 
 .menu-bar.expanded .menu-extra

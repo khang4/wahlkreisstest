@@ -27,8 +27,19 @@ class _mapControl
             this.loadGeoJsonTest();
         });
 
-        this.menu.querySelector(".expand").addEventListener("click",(e)=>{
-            this.menu.classList.add("expanded");
+        var expandMenuButton=this.menu.querySelector(".expand");
+        expandMenuButton.addEventListener("click",(e)=>{
+            if (!this.menu.classList.contains("expanded"))
+            {
+                this.menu.classList.add("expanded");
+                expandMenuButton.innerText="minimise additional information";
+            }
+
+            else
+            {
+                this.menu.classList.remove("expanded");
+                expandMenuButton.innerText="additional information";
+            }
         });
     }
 
