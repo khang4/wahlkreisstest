@@ -11,4 +11,6 @@ class _mapControl
 
     void roadLineDrawtest();
     void loadGeoJsonTest();
+
+    void loadTracs();
 }

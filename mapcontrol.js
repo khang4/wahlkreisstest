@@ -113,4 +113,12 @@ class _mapControl
             infowindow.open(this.map);
         });
     }
+
+    loadTracs()
+    {
+        var kml=new google.maps.KmlLayer({
+            map:this.map,
+            url:"tracs/cb_2016_24_tract_500k.kml"
+        });
+    }
 }
