@@ -118,7 +118,23 @@ class _mapControl
     {
         var kml=new google.maps.KmlLayer({
             map:this.map,
-            url:"tracs/cb_2016_24_tract_500k.kml"
+            url:"https://raw.githubusercontent.com/khang4/wahlkreisstest/master/tracs/cb_2016_24_tract_500k.kml"
         });
+
+        // var r=new XMLHttpRequest();
+
+        // r.open("GET","tracs/cb_2016_24_tract_500k.kml");
+
+        // r.responseType="document";
+        // r.onreadystatechange=()=>{
+        //     if (r.readyState==4)
+        //     {
+        //         var geodata=toGeoJSON.kml(r.response);
+        //         console.log(geodata);
+        //         this.map.data.addGeoJson(geodata);
+        //     }
+        // };
+
+        // r.send();
     }
 }
