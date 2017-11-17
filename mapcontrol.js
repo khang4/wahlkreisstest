@@ -2,7 +2,8 @@ class _mapControl
 {
     constructor()
     {
-        this.map=new google.maps.Map(document.querySelector(".map"),{
+        this.emap=document.querySelector(".map");
+        this.map=new google.maps.Map(this.emap,{
             center:{lat:38.682,lng:-77.344},
             zoom:8
         });
@@ -22,6 +23,7 @@ class _mapControl
             this.menu.classList.remove("expanded");
             this.menu.classList.add("hidden");
             this.menuShow.classList.remove("hidden");
+            this.emap.classList.remove("unmaximise");
             expandMenuButton.innerText="additional information";
         });
 
@@ -30,7 +32,7 @@ class _mapControl
         });
 
         this.menu.querySelector(".maximise").addEventListener("click",(e)=>{
-
+            this.emap.classList.add("unmaximise");
         });
 
         expandMenuButton.addEventListener("click",(e)=>{
@@ -43,6 +45,7 @@ class _mapControl
             else
             {
                 this.menu.classList.remove("expanded");
+                this.emap.classList.remove("unmaximise");
                 expandMenuButton.innerText="additional information";
             }
         });

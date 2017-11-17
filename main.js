@@ -12,7 +12,7 @@ function htest()
     console.log("he");
     var r=new XMLHttpRequest();
 
-    r.open("GET","https://districtlands.herokuapp.com/");
+    r.open("GET","https://districtlands.herokuapp.com/districtlands/example/something/");
 
     r.onreadystatechange=()=>{
         if (r.readyState==4)
