@@ -1,5 +1,6 @@
 class _mapControl
 {
+    element emap;
     Map map; //map object from google map api
     DirectionService direction; //direction service object
 
