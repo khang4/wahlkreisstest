@@ -7,12 +7,12 @@ function main()
     control=new _mapControl;
 }
 
-function htest()
+function htest(rurl="https://districtlands.herokuapp.com/")
 {
     console.log("he");
     var r=new XMLHttpRequest();
 
-    r.open("GET","https://districtlands.herokuapp.com/districtlands/example/something/");
+    r.open("GET",rurl);
 
     r.onreadystatechange=()=>{
         if (r.readyState==4)

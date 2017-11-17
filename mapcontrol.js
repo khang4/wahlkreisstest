@@ -119,10 +119,10 @@ class _mapControl
 
     loadTracs()
     {
-        var kml=new google.maps.KmlLayer({
-            map:this.map,
-            url:"https://raw.githubusercontent.com/khang4/wahlkreisstest/master/tracs/cb_2016_24_tract_500k.kml"
-        });
+        // var kml=new google.maps.KmlLayer({
+        //     map:this.map,
+        //     url:"https://raw.githubusercontent.com/khang4/wahlkreisstest/master/tracs/cb_2016_24_tract_500k.kml"
+        // });
 
         // var r=new XMLHttpRequest();
 
