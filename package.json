@@ -1,0 +1,11 @@
+{
+  "name": "wahlkreisstest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "risonakamo",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.16.2",
+    "serve-static": "^1.13.1"
+  }
+}
